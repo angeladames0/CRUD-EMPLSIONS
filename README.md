@@ -1,4 +1,4 @@
-Para hacer funcionar el proyecto en Visual Studio, debe seguir los siguientes pasos:
+<b>Para hacer funcionar el proyecto en Visual Studio, debe seguir los siguientes pasos:</b>
 
 - Descargar e instalar PostgreSQL: La aplicación utiliza PostgreSQL como la base de datos. Puede descargar la versión adecuada para su sistema operativo desde el sitio web oficial de PostgreSQL. También debe asegurarse de tener los derechos necesarios para crear una base de datos.
 
@@ -18,7 +18,9 @@ Para hacer funcionar el proyecto en Visual Studio, debe seguir los siguientes pa
 
 Una vez completados estos pasos, debería poder acceder a la aplicación en `http://localhost:8080` y utilizarla para registrar solicitudes de permisos y mantener un registro de ellas.
 
-Codigo de tablas DB:
+
+<br><br>
+<b>Codigo de tablas DB:</b>
 <details>
 
 ```
@@ -32,7 +34,7 @@ CREATE TABLE permisos (
   id SERIAL PRIMARY KEY,
   nombreempleado VARCHAR(50) NOT NULL,
   apellidosempleado VARCHAR(50) NOT NULL,
-  ripopermisoId INT NOT NULL,
+  tipopermisoId INT NOT NULL,
   fechapermiso DATE NOT NULL,
   FOREIGN KEY (tipopermisoid) REFERENCES tipopermiso(id)
 );
