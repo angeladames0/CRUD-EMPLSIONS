@@ -17,3 +17,26 @@ Para hacer funcionar el proyecto en Visual Studio, debe seguir los siguientes pa
 - Ejecutar el frontend: En Visual Studio, seleccione el proyecto de frontend y ejecute en la terminar: npm run serve para ejecutar el frontend. Esto iniciará el frontend y lo hará disponible en `http://localhost:8080`.
 
 Una vez completados estos pasos, debería poder acceder a la aplicación en `http://localhost:8080` y utilizarla para registrar solicitudes de permisos y mantener un registro de ellas.
+
+Codigo de tablas DB:
+<details>
+
+```
+
+CREATE TABLE tipopermiso (
+  id SERIAL PRIMARY KEY,
+  descripcion VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE permisos (
+  id SERIAL PRIMARY KEY,
+  nombreempleado VARCHAR(50) NOT NULL,
+  apellidosempleado VARCHAR(50) NOT NULL,
+  ripopermisoId INT NOT NULL,
+  fechapermiso DATE NOT NULL,
+  FOREIGN KEY (tipopermisoid) REFERENCES tipopermiso(id)
+);
+
+```
+
+</details>
